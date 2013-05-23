@@ -1,0 +1,23 @@
+Challenge:
+
+Right now, each chat message that gets sent from client to the server contains
+name of the user that the message is coming from, which then gets displayed
+right next to the message itself (i.e. when John types "Hello world!",
+everybody else see it as "John: Hello world!" on the screen). This is a bit
+redundant: if John sends 100 messages to the same chat server, every single
+one of those will also carry the string "John" in it. Your goal is to change
+the code so that you wouldn't send user's name more than once after you
+connect to a server, and it would still be displayed in the chat view, just
+like it is now. Think of it as an optimization aimed at reducing the bandwidth
+used by the app.
+
+
+
+
+One possible solution:
+
+- RemoteChatRoom: Whenever you connect to a chat server, send a special
+message, which would carry name of the connecting user.
+- LocalChatRoom: Associate each connection with it's respective username.
+- LocalChatRoom: Whenever a chat message arrives, look up username based
+on which connection the message came through and display it in chat.
