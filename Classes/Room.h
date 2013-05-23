@@ -33,7 +33,7 @@
   id<RoomDelegate> delegate;
 }
 
-@property(nonatomic,retain) id<RoomDelegate> delegate;
+@property(nonatomic,strong) id<RoomDelegate> delegate;
 
 - (BOOL)start;
 - (void)stop;

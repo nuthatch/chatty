@@ -46,10 +46,6 @@
 
 
 // Cleanup
-- (void)dealloc {
-    self.chatRoom = nil;
-    [super dealloc];
-}
 
 
 // We are being asked to display a chat message
@@ -64,7 +60,6 @@
   // Explain what happened
   UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Room terminated" message:reason delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
   [alert show];
-  [alert release];
   [self exit];
 }
 

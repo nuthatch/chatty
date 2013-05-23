@@ -36,7 +36,7 @@
 }
 
 @property(nonatomic,readonly) NSArray* servers;
-@property(nonatomic,retain) id<ServerBrowserDelegate> delegate;
+@property(nonatomic,strong) id<ServerBrowserDelegate> delegate;
 
 // Start browsing for Bonjour services
 - (BOOL)start;

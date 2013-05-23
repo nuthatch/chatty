@@ -30,7 +30,7 @@
 
 // Private properties
 @interface RemoteRoom ()
-@property(nonatomic,retain) Connection* connection;
+@property(nonatomic,strong) Connection* connection;
 @end
 
 
@@ -53,10 +53,6 @@
 
 
 // Cleanup
-- (void)dealloc {
-  self.connection = nil;
-  [super dealloc];
-}
 
 
 // Start everything up, connect to server

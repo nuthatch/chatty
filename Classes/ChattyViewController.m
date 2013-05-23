@@ -33,7 +33,7 @@
 
 // Private properties
 @interface ChattyViewController ()
-@property(nonatomic,retain) ServerBrowser* serverBrowser;
+@property(nonatomic,strong) ServerBrowser* serverBrowser;
 @end
 
 
@@ -49,10 +49,6 @@
 
 
 // Cleanup
-- (void)dealloc {
-  self.serverBrowser = nil;
-  [super dealloc];
-}
 
 
 // View became active, start your engines
@@ -68,7 +64,7 @@
   [serverBrowser stop];
 
   // Create local chat room and go
-  LocalRoom* room = [[[LocalRoom alloc] init] autorelease];
+  LocalRoom* room = [[LocalRoom alloc] init];
   [[ChattyAppDelegate getInstance] showChatRoom:room];
 }
 
@@ -80,14 +76,13 @@
   if ( currentRow == nil ) {
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Which chat room?" message:@"Please select which chat room you want to join from the list above" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     [alert show];
-    [alert release];
     return;
   }
 
   NSNetService* selectedServer = [serverBrowser.servers objectAtIndex:currentRow.row];
 
   // Create chat room that will connect to that chat server
-  RemoteRoom* room = [[[RemoteRoom alloc] initWithNetService:selectedServer] autorelease];
+  RemoteRoom* room = [[RemoteRoom alloc] initWithNetService:selectedServer];
   
   // Stop browsing and switch over to chat room
   [serverBrowser stop];
@@ -118,7 +113,7 @@
 
   UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:serverListIdentifier];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:serverListIdentifier] autorelease];
+		cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:serverListIdentifier];
 	}
 
   // Set cell's text to server's name

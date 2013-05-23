@@ -55,7 +55,7 @@
   NSMutableData* outgoingDataBuffer;
 }
 
-@property(nonatomic,retain) id<ConnectionDelegate> delegate;
+@property(nonatomic,strong) id<ConnectionDelegate> delegate;
 
 // Initialize and store connection information until 'connect' is called
 - (id)initWithHostAddress:(NSString*)host andPort:(int)port;

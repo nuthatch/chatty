@@ -37,10 +37,10 @@
   WelcomeViewController *welcomeViewController;
 }
 
-@property(nonatomic, retain) IBOutlet UIWindow *window;
-@property(nonatomic, retain) IBOutlet ChattyViewController *viewController;
-@property(nonatomic, retain) IBOutlet ChatRoomViewController *chatRoomViewController;
-@property(nonatomic, retain) IBOutlet WelcomeViewController *welcomeViewController;
+@property(nonatomic, strong) IBOutlet UIWindow *window;
+@property(nonatomic, strong) IBOutlet ChattyViewController *viewController;
+@property(nonatomic, strong) IBOutlet ChatRoomViewController *chatRoomViewController;
+@property(nonatomic, strong) IBOutlet WelcomeViewController *welcomeViewController;
 
 
 // Main instance of the app delegate

@@ -34,10 +34,6 @@
 @synthesize delegate;
 
 // Cleanup
-- (void)dealloc {
-  self.delegate = nil;
-  [super dealloc];
-}
 
 
 // "Abstract" methods

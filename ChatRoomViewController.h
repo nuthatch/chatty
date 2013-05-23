@@ -36,7 +36,7 @@
   IBOutlet UITextField* input;
 }
 
-@property(nonatomic,retain) Room* chatRoom;
+@property(nonatomic,strong) Room* chatRoom;
 
 // Exit back to the welcome screen
 - (IBAction)exit;

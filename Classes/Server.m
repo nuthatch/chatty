@@ -37,7 +37,7 @@
 // Declare some private properties and methods
 @interface Server ()
 @property(nonatomic,assign) uint16_t port;
-@property(nonatomic,retain) NSNetService* netService;
+@property(nonatomic,strong) NSNetService* netService;
 
 - (BOOL)createServer;
 - (void)terminateServer;
@@ -54,11 +54,6 @@
 @synthesize port, netService;
 
 // Cleanup
-- (void)dealloc {
-  self.netService = nil;
-  self.delegate = nil;
-  [super dealloc];
-}
 
 
 // Create server and announce it
@@ -89,7 +84,7 @@
 
 // Handle new connections
 - (void)handleNewNativeSocket:(CFSocketNativeHandle)nativeSocketHandle {
-  Connection* connection = [[[Connection alloc] initWithNativeSocketHandle:nativeSocketHandle] autorelease];
+  Connection* connection = [[Connection alloc] initWithNativeSocketHandle:nativeSocketHandle];
   
   // In case of errors, close native socket handle
   if ( connection == nil ) {
@@ -110,7 +105,7 @@
 
 // This function will be used as a callback while creating our listening socket via 'CFSocketCreate'
 static void serverAcceptCallback(CFSocketRef socket, CFSocketCallBackType type, CFDataRef address, const void *data, void *info) {
-  Server *server = (Server*)info;
+  Server *server = (__bridge Server*)info;
   
   // We can only process "connection accepted" calls here
   if ( type != kCFSocketAcceptCallBack ) {
@@ -138,7 +133,7 @@ static void serverAcceptCallback(CFSocketRef socket, CFSocketCallBackType type, 
     //   CFAllocatorReleaseCallBack release;
     //   CFAllocatorCopyDescriptionCallBack copyDescription;
     //  };
-  CFSocketContext socketCtxt = {0, self, NULL, NULL, NULL};
+  CFSocketContext socketCtxt = {0, (__bridge void *)(self), NULL, NULL, NULL};
 
   listeningSocket = CFSocketCreate(
     kCFAllocatorDefault,
@@ -179,7 +174,7 @@ static void serverAcceptCallback(CFSocketRef socket, CFSocketCallBackType type, 
   
   // Bind our socket to the endpoint. Check if successful.
   if ( CFSocketSetAddress(listeningSocket,
-      (CFDataRef)socketAddressData) != kCFSocketSuccess ) {
+      (__bridge CFDataRef)socketAddressData) != kCFSocketSuccess ) {
     // Cleanup
     if ( listeningSocket != NULL ) {
       CFRelease(listeningSocket);
@@ -193,7 +188,7 @@ static void serverAcceptCallback(CFSocketRef socket, CFSocketCallBackType type, 
   //// PART 3: Find out what port kernel assigned to our socket
   // We need it to advertise our service via Bonjour
   NSData *socketAddressActualData = 
-      [(NSData *)CFSocketCopyAddress(listeningSocket) autorelease];
+      (__bridge NSData *)CFSocketCopyAddress(listeningSocket);
 
   // Convert socket data into a usable structure
   struct sockaddr_in socketAddressActual;

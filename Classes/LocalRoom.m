@@ -31,8 +31,8 @@
 
 // Private properties
 @interface LocalRoom ()
-@property(nonatomic,retain) Server* server;
-@property(nonatomic,retain) NSMutableSet* clients;
+@property(nonatomic,strong) Server* server;
+@property(nonatomic,strong) NSMutableSet* clients;
 @end
 
 
@@ -49,11 +49,6 @@
 
 
 // Cleanup
-- (void)dealloc {
-  self.clients = nil;
-  self.server = nil;
-  [super dealloc];
-}
 
 
 // Start the server and announce self

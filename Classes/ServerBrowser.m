@@ -63,14 +63,6 @@
 
 
 // Cleanup
-- (void)dealloc {
-  if ( servers != nil ) {
-    [servers release];
-    servers = nil;
-  }
-  self.delegate = nil;
-  [super dealloc];
-}
 
 
 // Start browsing for servers
@@ -99,7 +91,6 @@
   }
   
   [netServiceBrowser stop];
-  [netServiceBrowser release];
   netServiceBrowser = nil;
   
   [servers removeAllObjects];

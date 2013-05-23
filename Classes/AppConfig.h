@@ -32,7 +32,7 @@
   NSString* name;
 }
 
-@property (retain) NSString* name;
+@property (strong) NSString* name;
 
 // Singleton - one instance for the whole app
 + (AppConfig*)getInstance;

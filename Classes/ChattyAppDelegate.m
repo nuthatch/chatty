@@ -55,13 +55,6 @@ static ChattyAppDelegate* _instance;
 }
 
 
-- (void)dealloc {
-    [viewController release];
-    [chatRoomViewController release];
-    [welcomeViewController release];
-    [window release];
-    [super dealloc];
-}
 
 
 + (ChattyAppDelegate*)getInstance {
