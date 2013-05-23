@@ -44,21 +44,20 @@ static ChattyAppDelegate* _instance;
     _instance = self;
 
     // Create the root view controller
-    self.viewController = [[ChattyViewController alloc] init];
+    self.roomListController = [[ChattyViewController alloc] init];
     self.chatRoomViewController = [[ChatRoomViewController alloc] init];
     self.welcomeViewController = [[WelcomeViewController alloc] init];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     // Override point for customization after app launch
-    [window addSubview:chatRoomViewController.view];
-    [window addSubview:viewController.view];
-    [window addSubview:welcomeViewController.view];
-    [window makeKeyAndVisible];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:welcomeViewController];
+
+     [self.window setRootViewController: self.navigationController];
+    [self.window makeKeyAndVisible];
     
     // Greet user
-    [window bringSubviewToFront:welcomeViewController.view];
-    [welcomeViewController activate];
+    [self.welcomeViewController activate];
 }
 
 
@@ -71,18 +70,19 @@ static ChattyAppDelegate* _instance;
 
 // Show chat room
 - (void)showChatRoom:(Room*)room {
-  chatRoomViewController.chatRoom = room;
-  [chatRoomViewController activate];
-  
-  [window bringSubviewToFront:chatRoomViewController.view];
+  self.chatRoomViewController.chatRoom = room;
+  [self.chatRoomViewController activate];
+
+    [self.navigationController pushViewController:self.chatRoomViewController animated:NO];
 }
 
 
 // Show screen with room selection
 - (void)showRoomSelection {
-  [viewController activate];
-  
-  [window bringSubviewToFront:viewController.view];
+  [self.roomListController activate];
+
+  [self.navigationController pushViewController:self.roomListController animated:NO];
+
 }
 
 

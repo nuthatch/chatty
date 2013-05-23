@@ -38,10 +38,10 @@
 }
 
 @property(nonatomic, strong) IBOutlet UIWindow *window;
-@property(nonatomic, strong) IBOutlet ChattyViewController *viewController;
+@property(nonatomic, strong) IBOutlet ChattyViewController *roomListController;
 @property(nonatomic, strong) IBOutlet ChatRoomViewController *chatRoomViewController;
 @property(nonatomic, strong) IBOutlet WelcomeViewController *welcomeViewController;
-
+@property(nonatomic, strong) UINavigationController *navigationController;
 
 // Main instance of the app delegate
 + (ChattyAppDelegate*)getInstance;
