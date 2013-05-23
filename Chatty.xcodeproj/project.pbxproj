@@ -12,16 +12,25 @@
 		C72C3AFC174E63E200B506DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		C72C3B02174E63E200B506DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B00174E63E200B506DF /* InfoPlist.strings */; };
 		C72C3B04174E63E200B506DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C72C3B03174E63E200B506DF /* main.m */; };
-		C72C3B08174E63E200B506DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72C3B07174E63E200B506DF /* AppDelegate.m */; };
 		C72C3B0A174E63E200B506DF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B09174E63E200B506DF /* Default.png */; };
 		C72C3B0C174E63E200B506DF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B0B174E63E200B506DF /* Default@2x.png */; };
 		C72C3B0E174E63E200B506DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B0D174E63E200B506DF /* Default-568h@2x.png */; };
-		C72C3B11174E63E200B506DF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72C3B10174E63E200B506DF /* MasterViewController.m */; };
-		C72C3B14174E63E200B506DF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72C3B13174E63E200B506DF /* DetailViewController.m */; };
-		C72C3B17174E63E200B506DF /* MasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B15174E63E200B506DF /* MasterViewController_iPhone.xib */; };
-		C72C3B1A174E63E200B506DF /* MasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B18174E63E200B506DF /* MasterViewController_iPad.xib */; };
-		C72C3B1D174E63E200B506DF /* DetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B1B174E63E200B506DF /* DetailViewController_iPhone.xib */; };
-		C72C3B20174E63E200B506DF /* DetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B1E174E63E200B506DF /* DetailViewController_iPad.xib */; };
+		C7D8E943174E7CC2008F1625 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = D0510A510F9E00BB00B735FA /* Room.m */; };
+		C7D8E944174E7CC2008F1625 /* RemoteRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = D043D8050F99B6A90030638C /* RemoteRoom.m */; };
+		C7D8E945174E7CC2008F1625 /* LocalRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = D043D8470F99BB250030638C /* LocalRoom.m */; };
+		C7D8E946174E7CCE008F1625 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = D043D7F20F94AA2A0030638C /* Server.m */; };
+		C7D8E947174E7CCE008F1625 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = D043D7FA0F94B0BD0030638C /* Connection.m */; };
+		C7D8E948174E7CCE008F1625 /* ServerBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = D043DA9C0F9CEA100030638C /* ServerBrowser.m */; };
+		C7D8E949174E7CD1008F1625 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D039DF540F9E515F00C77B72 /* WelcomeViewController.m */; };
+		C7D8E94A174E7CD1008F1625 /* ChattyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ChattyAppDelegate.m */; };
+		C7D8E94B174E7CD1008F1625 /* ChattyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ChattyViewController.m */; };
+		C7D8E94C174E7CD1008F1625 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0510A450F9DFCB900B735FA /* ChatRoomViewController.m */; };
+		C7D8E94D174E7CD5008F1625 /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D0510A6E0F9E14ED00B735FA /* UITextView+Utils.m */; };
+		C7D8E94E174E7CD5008F1625 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D043D9190F9CB4A60030638C /* AppConfig.m */; };
+		C7D8E94F174E7EAD008F1625 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D039DF4D0F9E50E100C77B72 /* WelcomeViewController.xib */; };
+		C7D8E950174E7EAD008F1625 /* ChattyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ChattyViewController.xib */; };
+		C7D8E951174E7EAD008F1625 /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0510A470F9DFD0300B735FA /* ChatRoomViewController.xib */; };
+		C7D8E952174E7ED5008F1625 /* Chatty-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C72C3AFF174E63E200B506DF /* Chatty-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,30 +40,17 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* ChattyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattyViewController.xib; sourceTree = "<group>"; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* ChattyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChattyViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* ChattyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChattyViewController.m; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Chatty_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chatty_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72C3AF9174E63E200B506DF /* Chatty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72C3AFF174E63E200B506DF /* Chatty-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chatty-Info.plist"; sourceTree = "<group>"; };
 		C72C3B01174E63E200B506DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C72C3B03174E63E200B506DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C72C3B05174E63E200B506DF /* Chatty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chatty-Prefix.pch"; sourceTree = "<group>"; };
-		C72C3B06174E63E200B506DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C72C3B07174E63E200B506DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C72C3B09174E63E200B506DF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C72C3B0B174E63E200B506DF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C72C3B0D174E63E200B506DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C72C3B0F174E63E200B506DF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		C72C3B10174E63E200B506DF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		C72C3B12174E63E200B506DF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		C72C3B13174E63E200B506DF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		C72C3B16174E63E200B506DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPhone.xib; sourceTree = "<group>"; };
-		C72C3B19174E63E200B506DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPad.xib; sourceTree = "<group>"; };
-		C72C3B1C174E63E200B506DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPhone.xib; sourceTree = "<group>"; };
-		C72C3B1F174E63E200B506DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPad.xib; sourceTree = "<group>"; };
 		D039DD800F9E33C100C77B72 /* ServerBrowserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerBrowserDelegate.h; sourceTree = "<group>"; };
 		D039DF4D0F9E50E100C77B72 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		D039DF530F9E515F00C77B72 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
@@ -134,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				32CA4F630368D1EE00C91783 /* Chatty_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -145,8 +140,6 @@
 				D039DF4D0F9E50E100C77B72 /* WelcomeViewController.xib */,
 				2899E5210DE3E06400AC0155 /* ChattyViewController.xib */,
 				D0510A470F9DFD0300B735FA /* ChatRoomViewController.xib */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -165,16 +158,6 @@
 		C72C3AFD174E63E200B506DF /* Chatty */ = {
 			isa = PBXGroup;
 			children = (
-				C72C3B06174E63E200B506DF /* AppDelegate.h */,
-				C72C3B07174E63E200B506DF /* AppDelegate.m */,
-				C72C3B0F174E63E200B506DF /* MasterViewController.h */,
-				C72C3B10174E63E200B506DF /* MasterViewController.m */,
-				C72C3B12174E63E200B506DF /* DetailViewController.h */,
-				C72C3B13174E63E200B506DF /* DetailViewController.m */,
-				C72C3B15174E63E200B506DF /* MasterViewController_iPhone.xib */,
-				C72C3B18174E63E200B506DF /* MasterViewController_iPad.xib */,
-				C72C3B1B174E63E200B506DF /* DetailViewController_iPhone.xib */,
-				C72C3B1E174E63E200B506DF /* DetailViewController_iPad.xib */,
 				C72C3AFE174E63E200B506DF /* Supporting Files */,
 			);
 			path = Chatty;
@@ -303,10 +286,10 @@
 				C72C3B0A174E63E200B506DF /* Default.png in Resources */,
 				C72C3B0C174E63E200B506DF /* Default@2x.png in Resources */,
 				C72C3B0E174E63E200B506DF /* Default-568h@2x.png in Resources */,
-				C72C3B17174E63E200B506DF /* MasterViewController_iPhone.xib in Resources */,
-				C72C3B1A174E63E200B506DF /* MasterViewController_iPad.xib in Resources */,
-				C72C3B1D174E63E200B506DF /* DetailViewController_iPhone.xib in Resources */,
-				C72C3B20174E63E200B506DF /* DetailViewController_iPad.xib in Resources */,
+				C7D8E94F174E7EAD008F1625 /* WelcomeViewController.xib in Resources */,
+				C7D8E950174E7EAD008F1625 /* ChattyViewController.xib in Resources */,
+				C7D8E951174E7EAD008F1625 /* ChatRoomViewController.xib in Resources */,
+				C7D8E952174E7ED5008F1625 /* Chatty-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,9 +301,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72C3B04174E63E200B506DF /* main.m in Sources */,
-				C72C3B08174E63E200B506DF /* AppDelegate.m in Sources */,
-				C72C3B11174E63E200B506DF /* MasterViewController.m in Sources */,
-				C72C3B14174E63E200B506DF /* DetailViewController.m in Sources */,
+				C7D8E943174E7CC2008F1625 /* Room.m in Sources */,
+				C7D8E944174E7CC2008F1625 /* RemoteRoom.m in Sources */,
+				C7D8E945174E7CC2008F1625 /* LocalRoom.m in Sources */,
+				C7D8E946174E7CCE008F1625 /* Server.m in Sources */,
+				C7D8E947174E7CCE008F1625 /* Connection.m in Sources */,
+				C7D8E948174E7CCE008F1625 /* ServerBrowser.m in Sources */,
+				C7D8E949174E7CD1008F1625 /* WelcomeViewController.m in Sources */,
+				C7D8E94A174E7CD1008F1625 /* ChattyAppDelegate.m in Sources */,
+				C7D8E94B174E7CD1008F1625 /* ChattyViewController.m in Sources */,
+				C7D8E94C174E7CD1008F1625 /* ChatRoomViewController.m in Sources */,
+				C7D8E94D174E7CD5008F1625 /* UITextView+Utils.m in Sources */,
+				C7D8E94E174E7CD5008F1625 /* AppConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,38 +325,6 @@
 				C72C3B01174E63E200B506DF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C72C3B15174E63E200B506DF /* MasterViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C72C3B16174E63E200B506DF /* en */,
-			);
-			name = MasterViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		C72C3B18174E63E200B506DF /* MasterViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C72C3B19174E63E200B506DF /* en */,
-			);
-			name = MasterViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		C72C3B1B174E63E200B506DF /* DetailViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C72C3B1C174E63E200B506DF /* en */,
-			);
-			name = DetailViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		C72C3B1E174E63E200B506DF /* DetailViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C72C3B1F174E63E200B506DF /* en */,
-			);
-			name = DetailViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -399,6 +359,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -419,6 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "Chatty/Chatty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -432,6 +394,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
