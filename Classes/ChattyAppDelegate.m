@@ -42,7 +42,14 @@ static ChattyAppDelegate* _instance;
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
     // Allow other classes to use us
     _instance = self;
-    
+
+    // Create the root view controller
+    self.viewController = [[ChattyViewController alloc] init];
+    self.chatRoomViewController = [[ChatRoomViewController alloc] init];
+    self.welcomeViewController = [[WelcomeViewController alloc] init];
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
     // Override point for customization after app launch
     [window addSubview:chatRoomViewController.view];
     [window addSubview:viewController.view];
