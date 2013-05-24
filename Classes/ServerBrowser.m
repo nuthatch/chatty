@@ -57,8 +57,11 @@
 
 // Initialize
 - (id)init {
-  servers = [[NSMutableArray alloc] init];
-  return self;
+    self = [super init];
+    if (self) {
+        servers = [[NSMutableArray alloc] init];
+    }
+    return self;
 }
 
 
@@ -77,7 +80,7 @@
 		return NO;
 	}
 
-	netServiceBrowser.delegate = self;
+	netServiceBrowser.delegate = (id)self;
 	[netServiceBrowser searchForServicesOfType:@"_chatty._tcp." inDomain:@""];
   
   return YES;

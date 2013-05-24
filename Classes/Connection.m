@@ -150,7 +150,7 @@ void writeStreamEventHandler(CFWriteStreamRef stream, CFStreamEventType eventTyp
     }
 
     // Start resolving
-    netService.delegate = self;
+    netService.delegate = (id)self;
     [netService resolveWithTimeout:5.0];
     return YES;
   }

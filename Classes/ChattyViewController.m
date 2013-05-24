@@ -113,12 +113,12 @@
 
   UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:serverListIdentifier];
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:serverListIdentifier];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:serverListIdentifier];
 	}
 
   // Set cell's text to server's name
   NSNetService* server = [serverBrowser.servers objectAtIndex:indexPath.row];
-  cell.text = [server name];
+  cell.textLabel.text = [server name];
   
   return cell;
 }

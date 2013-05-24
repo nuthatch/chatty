@@ -42,8 +42,10 @@
 
 // Initialization
 - (id)init {
-  clients = [[NSMutableSet alloc] init];
-  
+    self = [super init];
+    if (self) {
+        clients = [[NSMutableSet alloc] init];
+    }
   return self;
 }
 

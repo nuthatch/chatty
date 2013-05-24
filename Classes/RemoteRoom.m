@@ -40,15 +40,21 @@
 
 // Setup connection but don't connect yet
 - (id)initWithHost:(NSString*)host andPort:(int)port {
-  connection = [[Connection alloc] initWithHostAddress:host andPort:port];
-  return self;
+    self = [super init];
+    if (self) {
+        connection = [[Connection alloc] initWithHostAddress:host andPort:port];
+    }
+    return self;
 }
 
 
 // Initialize and connect to a net service
 - (id)initWithNetService:(NSNetService*)netService {
-  connection = [[Connection alloc] initWithNetService:netService];
-  return self;
+    self = [super init];
+    if (self) {
+        connection = [[Connection alloc] initWithNetService:netService];
+    }
+    return self;
 }
 
 

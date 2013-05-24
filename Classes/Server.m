@@ -234,7 +234,7 @@ static void serverAcceptCallback(CFSocketRef socket, CFSocketCallBackType type, 
       forMode:NSRunLoopCommonModes];
 
   // NetService will let us know about what's happening via delegate methods
-	[self.netService setDelegate:self];
+	[self.netService setDelegate:(id)self];
   
   // Publish the service
 	[self.netService publish];
