@@ -72,7 +72,6 @@ static ChattyAppDelegate* _instance;
 // Show chat room
 - (void)showChatRoom:(Room*)room {
   self.chatRoomViewController.chatRoom = room;
-  [self.chatRoomViewController activate];
   self.chatRoomViewController.navigationItem.title = [AppConfig getInstance].name;
   [self.navigationController pushViewController:self.chatRoomViewController animated:NO];
 }
@@ -80,10 +79,7 @@ static ChattyAppDelegate* _instance;
 
 // Show screen with room selection
 - (void)showRoomSelection {
-  [self.roomListController activate];
-
   [self.navigationController pushViewController:self.roomListController animated:NO];
-
 }
 
 

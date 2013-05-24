@@ -57,6 +57,11 @@
   [serverBrowser start];
 }
 
+// activate room when pushed
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self activate];
+}
 
 // User is asking to create new chat room
 - (IBAction)createNewChatRoom:(id)sender {

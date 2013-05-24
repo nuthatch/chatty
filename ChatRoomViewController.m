@@ -44,6 +44,11 @@
   [input becomeFirstResponder];
 }
 
+// activate room when pushed
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self activate];
+}
 
 // Cleanup
 
