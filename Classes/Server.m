@@ -53,9 +53,6 @@
 @synthesize delegate;
 @synthesize port, netService;
 
-// Cleanup
-
-
 // Create server and announce it
 - (BOOL)start {
   // Start the socket server

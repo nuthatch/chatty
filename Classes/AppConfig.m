@@ -39,10 +39,6 @@ static AppConfig* instance;
   return self;
 }
 
-
-// Cleanup
-
-
 // Automatically initialize if called for the first time
 + (AppConfig*) getInstance {
   @synchronized([AppConfig class]) {

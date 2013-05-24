@@ -64,10 +64,6 @@
     return self;
 }
 
-
-// Cleanup
-
-
 // Start browsing for servers
 - (BOOL)start {
   // Restarting?

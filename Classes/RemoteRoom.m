@@ -57,10 +57,6 @@
     return self;
 }
 
-
-// Cleanup
-
-
 // Start everything up, connect to server
 - (BOOL)start {
   if ( connection == nil ) {

@@ -86,10 +86,6 @@ void writeStreamEventHandler(CFWriteStreamRef stream, CFStreamEventType eventTyp
   packetBodySize = -1;
 }
 
-
-// cleanup
-
-
 // Initialize and store connection information until 'connect' is called
 - (id)initWithHostAddress:(NSString*)_host andPort:(int)_port {
   [self clean];

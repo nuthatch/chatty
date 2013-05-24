@@ -49,10 +49,6 @@
   return self;
 }
 
-
-// Cleanup
-
-
 // Start the server and announce self
 - (BOOL)start {
   // Create new instance of the server and start it up

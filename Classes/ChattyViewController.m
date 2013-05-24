@@ -47,10 +47,6 @@
   serverBrowser.delegate = self;
 }
 
-
-// Cleanup
-
-
 // View became active, start your engines
 - (void)activate {
   // Start browsing for services

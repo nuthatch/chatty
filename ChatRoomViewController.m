@@ -50,9 +50,6 @@
     [self activate];
 }
 
-// Cleanup
-
-
 // We are being asked to display a chat message
 - (void)displayChatMessage:(NSString*)message fromUser:(NSString*)userName {
   [chat appendTextAfterLinebreak:[NSString stringWithFormat:@"%@: %@", userName, message]];
