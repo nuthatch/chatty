@@ -185,7 +185,7 @@ static void serverAcceptCallback(CFSocketRef socket, CFSocketCallBackType type, 
   //// PART 3: Find out what port kernel assigned to our socket
   // We need it to advertise our service via Bonjour
   NSData *socketAddressActualData = 
-      (__bridge NSData *)CFSocketCopyAddress(listeningSocket);
+      (NSData *)CFBridgingRelease(CFSocketCopyAddress(listeningSocket));
 
   // Convert socket data into a usable structure
   struct sockaddr_in socketAddressActual;
