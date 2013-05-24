@@ -63,6 +63,12 @@
   [self exit];
 }
 
+// assume user exits with 'back' in navigation, rather than exit button
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self exit];
+}
+
 
 // User decided to exit room
 - (IBAction)exit {
@@ -74,9 +80,9 @@
 
   // Erase chat
   chat.text = @"";
-  
+
   // Switch back to welcome view
-  [[ChattyAppDelegate getInstance] showRoomSelection];
+// [[ChattyAppDelegate getInstance] showRoomSelection];
 }
 
 

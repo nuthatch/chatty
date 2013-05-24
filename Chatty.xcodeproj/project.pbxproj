@@ -10,7 +10,6 @@
 		C72C3AFA174E63E200B506DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		C72C3AFB174E63E200B506DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		C72C3AFC174E63E200B506DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		C72C3B02174E63E200B506DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B00174E63E200B506DF /* InfoPlist.strings */; };
 		C72C3B04174E63E200B506DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C72C3B03174E63E200B506DF /* main.m */; };
 		C72C3B0A174E63E200B506DF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B09174E63E200B506DF /* Default.png */; };
 		C72C3B0C174E63E200B506DF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72C3B0B174E63E200B506DF /* Default@2x.png */; };
@@ -30,7 +29,6 @@
 		C7D8E94F174E7EAD008F1625 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D039DF4D0F9E50E100C77B72 /* WelcomeViewController.xib */; };
 		C7D8E950174E7EAD008F1625 /* ChattyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ChattyViewController.xib */; };
 		C7D8E951174E7EAD008F1625 /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0510A470F9DFD0300B735FA /* ChatRoomViewController.xib */; };
-		C7D8E952174E7ED5008F1625 /* Chatty-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C72C3AFF174E63E200B506DF /* Chatty-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -282,14 +280,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C72C3B02174E63E200B506DF /* InfoPlist.strings in Resources */,
 				C72C3B0A174E63E200B506DF /* Default.png in Resources */,
 				C72C3B0C174E63E200B506DF /* Default@2x.png in Resources */,
 				C72C3B0E174E63E200B506DF /* Default-568h@2x.png in Resources */,
 				C7D8E94F174E7EAD008F1625 /* WelcomeViewController.xib in Resources */,
 				C7D8E950174E7EAD008F1625 /* ChattyViewController.xib in Resources */,
 				C7D8E951174E7EAD008F1625 /* ChatRoomViewController.xib in Resources */,
-				C7D8E952174E7ED5008F1625 /* Chatty-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

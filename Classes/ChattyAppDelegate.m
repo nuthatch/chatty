@@ -29,13 +29,14 @@
 #import "ChattyViewController.h"
 #import "ChatRoomViewController.h"
 #import "WelcomeViewController.h"
+#import "AppConfig.h"
 
 static ChattyAppDelegate* _instance;
 
 @implementation ChattyAppDelegate
 
 @synthesize window;
-@synthesize viewController;
+@synthesize roomListController;
 @synthesize chatRoomViewController;
 @synthesize welcomeViewController;
 
@@ -43,17 +44,17 @@ static ChattyAppDelegate* _instance;
     // Allow other classes to use us
     _instance = self;
 
-    // Create the root view controller
-    self.roomListController = [[ChattyViewController alloc] init];
-    self.chatRoomViewController = [[ChatRoomViewController alloc] init];
     self.welcomeViewController = [[WelcomeViewController alloc] init];
+    self.welcomeViewController.navigationItem.title = @"Chatty";
+    self.roomListController = [[ChattyViewController alloc] init];
+    self.roomListController.navigationItem.title = @"Rooms";
+    self.chatRoomViewController = [[ChatRoomViewController alloc] init];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    // Override point for customization after app launch
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:welcomeViewController];
-
-     [self.window setRootViewController: self.navigationController];
+    // Create the root view controller
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:welcomeViewController];    
+    [self.window setRootViewController: self.navigationController];
     [self.window makeKeyAndVisible];
     
     // Greet user
@@ -72,8 +73,8 @@ static ChattyAppDelegate* _instance;
 - (void)showChatRoom:(Room*)room {
   self.chatRoomViewController.chatRoom = room;
   [self.chatRoomViewController activate];
-
-    [self.navigationController pushViewController:self.chatRoomViewController animated:NO];
+  self.chatRoomViewController.navigationItem.title = [AppConfig getInstance].name;
+  [self.navigationController pushViewController:self.chatRoomViewController animated:NO];
 }
 
 
